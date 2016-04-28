@@ -16,15 +16,15 @@ class Catcher {
 
   void display() {
     stroke(0);
-    fill(90);
+    fill(col);
     ellipse(x, y, r*2, r*2);
   }
   //function for drop/catcher intersection
   //TRUE OR FALSE is it intersecting?
   boolean intersect(Drop d) {
-    //calc distance btwn catcher and drop
+    //calc distance btwn catcher and drop 
     float distance = dist(x, y, d.x, d.y);
-    //compare distance 
+    //compare distance
     if (distance < r + d.r) {
       return true;
     } else {
